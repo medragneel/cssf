@@ -1,0 +1,32 @@
+@import '_variables';
+@import '_breakpoint';
+
+
+.card{
+    display: block;
+    padding: $bp;
+    border:$b-thickness solid #ddd;
+    border-radius: $br;
+    box-shadow: $bsh;
+
+    .card-head{
+        width: 100%;
+        margin-bottom: $bm;
+
+    }
+
+    .card-body{
+        font-size: $sm-fs;
+         a{
+            text-decoration: underline;
+        }
+
+    }
+    .card-title{
+        font-size: $lg-fs;
+        padding-bottom: $bp;
+        font-weight: bold;
+
+    }
+
+}

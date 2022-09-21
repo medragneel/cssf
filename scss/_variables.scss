@@ -1,0 +1,46 @@
+
+//colors
+$primary : hsl(211deg 90% 50%) !default;
+$dark : hsl(0deg 5% 10%) !default;
+$light : hsl(0deg 0% 93%) !default;
+$err: hsl(337deg 100% 50%) !default;
+$gold: hsl(30deg 50% 60%) !default;
+$success: hsl(151deg 54% 53%) !default;
+$warning: hsl(46deg 92% 54%) !default;
+
+$colors:(
+"primary": $primary,
+"dark": $dark,
+"light": $light,
+"danger": $err,
+"success": $success,
+"warning": $warning,
+"gold": $gold,
+
+);
+
+//spaces
+
+
+$bp: 1rem;
+$bm: 0.75rem;
+
+
+// borders
+$b-thickness: 1px;
+$br: 8px;
+
+//shadows
+$bsh: 1px 3px 5px rgba(0,0,0,0.1);
+
+// font sizes
+
+$b-fs: 1rem;
+$sm-fs: $b-fs * 0.75;
+$lg-fs: $b-fs * 1.5;
+$xl-fs: $b-fs * 2;
+$xxl-fs: $b-fs * 3;
+
+
+//gap
+$bga: 1rem;

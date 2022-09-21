@@ -1,0 +1,82 @@
+:root {
+  --tab-border-color: #F3F4F6;
+  --tab-panel-background: #fff;
+  --tab-border-bottom-color: #9CA3AF;
+  --tab-border-bottom-width: 2px;
+  --tab-spacing: 1rem .5rem;
+}
+
+/* Preview Needs */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2vw;
+  background: #fff;
+}
+
+/* Tabs Defaults */
+
+[data-tab] {
+  display: none;
+}
+
+[data-tab-panel] {
+  opacity: 0;
+  background-color: var(--tab-panel-background);
+  transition: opacity .3s ease-in-out;
+  visibility: hidden;
+  height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  border-bottom: 1px solid #D1D5DB;
+  display: flex;
+}
+
+[data-tab-label] {
+  padding: var(--tab-spacing, 0);
+  position: relative;
+  bottom: -1px;
+  background-color: var(--tab-background-color, none);
+  cursor: pointer;
+  border-top-left-radius: var(--tab-radius, 0);
+  border-top-right-radius: var(--tab-radius, 0);
+  border-bottom-width: var(--tab-border-bottom-width, 0);
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+
+[data-tab-label]:hover {
+  border-bottom-color: var(--tab-border-bottom-color);
+}
+
+/* Tab Label Active State */
+
+[data-tab="tab1"]:checked ~ nav [data-tab-label="tab1"],
+[data-tab="tab2"]:checked ~ nav [data-tab-label="tab2"],
+[data-tab="tab3"]:checked ~ nav [data-tab-label="tab3"] {
+  --tab-background-color: #fff;
+  box-shadow: var(--tab-active-shadow, 0);
+  border-bottom-color: #1D4ED8;
+  z-index: 10;
+}
+
+/* Tab Panel Active State */
+
+[data-tab="tab1"]:checked ~ nav ~ [data-tab-panel="tab1"],
+[data-tab="tab2"]:checked ~ nav ~ [data-tab-panel="tab2"],
+[data-tab="tab3"]:checked ~ nav ~ [data-tab-panel="tab3"],
+[data-tab="tab4"]:checked ~ nav ~ [data-tab-panel="tab4"] {
+  opacity: 1;
+  visibility: visible;
+  padding: var(--tab-spacing);
+  border: 1px solid var(--tab-panel-border-color);
+  width: 100%;
+  height: auto;
+}
+

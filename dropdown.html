@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/dropdown.css" media="all">
+        <link rel="stylesheet" href="css/tabs.css" media="all">
+        <title></title>
+    </head>
+    <body>
+        <details data-dropdown>
+            <summary>
+                admin
+            </summary>
+            <ul role="menu">
+                <li><a to='/admin/usersList'>users</a></li>
+                <li><a to='/admin/productsList'>products</a></li>
+                <li><a to='/admin/ordersList'>orders</a></li>
+            </ul>
+
+            </details>
+
+            <!-- tabs -->
+
+
+            <input checked="checked" id="tab1" type="radio" name="tab" data-tab="tab1" />
+            <input id="tab2" type="radio" name="tab" data-tab="tab2" />
+            <input id="tab3" type="radio" name="tab" data-tab="tab3" />
+            <input id="tab4" type="radio" name="tab" data-tab="tab4" />
+            <nav>
+                <label for="tab1" data-tab-label="tab1" role="tab">First Tab</label>
+                <label for="tab2" data-tab-label="tab2" role="tab">Second Tab</label>
+                <label for="tab3" data-tab-label="tab3" role="tab">Third Tab</label>
+                <label for="tab4" data-tab-label="tab4" role="tab">test Tab</label>
+            </nav>
+            <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1">
+                First Tab Panel
+            </section>
+            <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab1">
+                Second Tab Panel
+            </section>
+            <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab1">
+                Third Tab Panel
+            </section>
+            <section data-tab-panel="tab4" role="tabpanel" aria-labelledby="tab1">
+                hello test
+            </section>
+    </body>
+</html>

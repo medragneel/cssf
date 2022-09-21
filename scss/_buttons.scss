@@ -1,0 +1,141 @@
+//
+@import 'variables';
+
+
+.btn{
+    color: $light;
+    background-color: $primary;
+    border-radius: $br;
+    border: none;
+    padding: $bp;
+    outline: none;
+}
+
+
+@each $key, $clr in $colors {
+  .btn-#{$key}-outline{
+    background-color: transparent;
+    border: $b-thickness solid $clr;
+    color: $clr;
+    &:hover{
+        background-color: $clr;
+        color: $light;
+        border: none;
+        @if ($clr == $light) {
+            color: $dark;
+            
+        }
+
+
+        }
+  }
+}
+
+@each $key, $clr in $colors {
+  .btn-#{$key}{
+      background-color: $clr;
+      @if ($clr == $light ) { 
+          color: $dark;
+      }
+    &:hover{
+        background-color: transparent;
+        border: $b-thickness solid $clr;
+        color: $clr;
+
+        }
+  }
+}
+
+
+//// buttons
+//.btn{
+//    color: $light;
+//    background-color: $primary;
+//    border-radius: $br;
+//    border: none;
+//    padding: $bp;
+//    outline: none;
+//}
+//.btn-dark{
+//    background-color: $dark;
+//    color: $light;
+//
+//}
+//.btn-light{
+//    background-color: $light;
+//    color: $dark;
+//
+//}
+//.btn-danger{
+//    background-color: $err;
+//    color: $light;
+//
+//}
+//
+//.btn-warning{
+//    background-color: $warning;
+//    color: $dark;
+//
+//}
+//
+//.btn-primary{
+//    background-color: $primary;
+//    color: $light;
+//
+//}
+//.btn-gold{
+//    background-color: $gold;
+//    color: $light;
+//
+//}
+//.btn-success{
+//    background-color: $success;
+//    color: $light;
+//
+//}
+//// buttons-outline
+//
+//.btn-dark-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $dark;
+//    color: $dark;
+//
+//}
+//.btn-light-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $light;
+//    color: $light;
+//
+//}
+//.btn-danger-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $err;
+//    color: $err;
+//
+//}
+//
+//.btn-warning-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $warning;
+//    color: $warning;
+//
+//}
+//
+//.btn-primary-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $primary;
+//    color: $primary;
+//
+//}
+//.btn-gold-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $gold;
+//    color: $gold;
+//
+//}
+//.btn-success-outline{
+//    background-color: transparent;
+//    border: $b-thickness solid $success;
+//    color: $success;
+//
+//}

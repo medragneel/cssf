@@ -1,0 +1,85 @@
+@use "sass:math";
+@import 'breakpoint';
+
+$grid-cols: 12;
+$justify-vals: flex-start, flex-end , center , space-between , space-around ,space-evenly;
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+//col classes
+
+@include xs{
+@for $i from 1 through $grid-cols {
+    .col-#{$i}-xs{
+        box-sizing: border-box;
+        flex-grow: 0;
+        width: math.div($i * 100%, $grid-cols);
+
+    }
+    
+}
+}
+
+
+
+@include sm{
+@for $i from 1 through $grid-cols {
+    .col-#{$i}-sm{
+        box-sizing: border-box;
+        flex-grow: 0;
+        width: math.div($i * 100%, $grid-cols);
+
+    }
+    
+}
+}
+
+@include md{
+@for $i from 1 through $grid-cols {
+    .col-#{$i}-md{
+        box-sizing: border-box;
+        flex-grow: 0;
+        width: math.div($i * 100%, $grid-cols);
+
+    }
+    
+}
+
+}
+
+@include lg{
+@for $i from 1 through $grid-cols {
+    .col-#{$i}-lg{
+        box-sizing: border-box;
+        flex-grow: 0;
+        width: math.div($i * 100%, $grid-cols);
+
+    }
+    
+}
+}
+
+@include xl{
+@for $i from 1 through $grid-cols {
+    .col-#{$i}-xl{
+        box-sizing: border-box;
+        flex-grow: 0;
+        width: math.div($i * 100%, $grid-cols);
+
+    }
+    
+}
+}

@@ -1,0 +1,283 @@
+
+@use 'sass:math';
+
+
+$utilities:(
+    "padding":(
+    "prefix" : "p",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-left":(
+    "prefix" : "pl",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-right":(
+    "prefix" : "pr",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-inline":(
+    "prefix" : "px",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-top":(
+    "prefix" : "pt",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-bottom":(
+    "prefix" : "pb",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"padding-block":(
+    "prefix" : "py",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"margin":(
+    "prefix" : "m",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+"margin-left":(
+    "prefix" : "ml",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+"margin-right":(
+    "prefix" : "mr",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+"margin-inline":(
+    "prefix" : "mx",
+    "values":(
+        "0": 0,
+        "1": $bp,
+        "2": $bp * 2,
+        "3": $bp * 4,
+        "4": $bp * 6,
+        "5": $bp * 8,
+
+    )
+),
+"margin-top":(
+    "prefix" : "mt",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+"margin-bottom":(
+    "prefix" : "mb",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+
+"margin-block":(
+    "prefix" : "my",
+    "values":(
+        "0": 0,
+        "1": $bm,
+        "2": $bm * 2,
+        "3": $bm * 4,
+        "4": $bm * 6,
+        "5": $bm * 8,
+
+    )
+),
+"border-radius":(
+    "prefix" : "br",
+    "values":(
+        "default": $br,
+        "none": 0,
+        "xs": math.div($br,4),
+        "sm": math.div($br,2),
+        "lg": $br * 2,
+        "xl": $br * 4,
+        "full": 50%,
+
+    )
+),
+"display":(
+    "prefix" : "ds",
+    "values":(
+        "none": none,
+        "f": flex,
+        "g": grid,
+        "b": block,
+        "ib": inline-block,
+
+    )
+),
+"font-size":(
+    "prefix" : "fs",
+    "values":(
+        "sm": $sm-fs,
+        "md": $b-fs,
+        "lg": $lg-fs,
+        "xl": $xl-fs,
+        "xxl": $xxl-fs,
+
+    )
+),
+"gap":(
+    "prefix" : "g",
+    "values":(
+        "0": 0,
+        "1": $bga,
+        "2": $bga * 2,
+        "3": $bga * 4,
+        "4": $bga * 6,
+        "5": $bga * 8,
+
+    )
+),
+"justify-content":(
+    "prefix" : "j",
+    "values":(
+        "center": center,
+        "f-end": flex-end,
+        "f-start": flex-start,
+        "s-between": space-between,
+        "s-around":space-around ,
+        "s-evenly": space-evenly ,
+
+    )
+),
+"align-items":(
+    "prefix" : "al",
+    "values":(
+        "center": center,
+        "end": flex-end,
+        "start": flex-start,
+        "stretch": space-between,
+    )
+),
+"width":(
+    "prefix" : "w",
+    "values":(
+    "50": 50%,
+    "60": 60%,
+    "70": 70%,
+    "80": 80%,
+    "90": 90%,
+    "100": 100%,
+    )
+),
+);
+
+
+// generate utilities
+
+
+@each $prop, $map in $utilities {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map,"values");
+    @each $key , $val in $values {
+        @if ($key == "default") {
+            .#{$prefix}{
+
+                #{$prop}: $val;
+
+            } 
+        }@else{
+            .#{$prefix}-#{$key}{
+                #{$prop}: $val;
+
+            } 
+
+
+        }
+
+    };
+    
+};
+
+

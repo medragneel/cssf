@@ -1,0 +1,47 @@
+
+@import 'variables';
+
+
+
+
+@each $key, $clr in $colors {
+  .txt-#{$key}{
+      color: $clr;
+  }
+  .bg-#{$key}{
+      background-color: $clr;
+      color: $light;
+      @if ($clr == $light) {
+        color: $dark;
+      }
+  }
+
+  @for $i from 1 to 7 {
+      //lightrn colors
+      .txt-#{$key}-lighten-#{$i}{
+          color: mix(white,$clr,$i * 10);
+
+      }
+      .bg-#{$key}-lighten-#{$i}{
+          background-color: mix(white,$clr,$i * 10);
+          color: $dark;
+
+      }
+
+      .txt-#{$key}-darken-#{$i}{
+          color: mix(black,$clr,$i * 10)
+
+      }
+      .bg-#{$key}-darken-#{$i}{
+          background-color: mix(black,$clr,$i * 10);
+          color: $light;
+
+      }
+  } ;
+
+}
+
+
+
+
+
