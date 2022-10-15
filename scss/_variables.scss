@@ -7,6 +7,7 @@ $err: hsl(337deg 100% 50%) !default;
 $gold: hsl(30deg 50% 60%) !default;
 $success: hsl(151deg 54% 53%) !default;
 $warning: hsl(46deg 92% 54%) !default;
+$disabled: hsl(0deg 0% 87%) !default;
 
 $colors:(
 "primary": $primary,
@@ -16,6 +17,7 @@ $colors:(
 "success": $success,
 "warning": $warning,
 "gold": $gold,
+"disabled": $disabled,
 
 );
 

@@ -45,26 +45,3 @@ $breakpoints:(
 }
 
 
-.responsive{
-
-    @include xs{
-        background-color: $light;
-    }
-
-    @include sm{
-        background-color: $err;
-    }
-
-  @include md{
-    background-color: $warning;
- }
-
-@include lg{
-    background-color: $primary;
-}
-
-@include xl{
-    background-color: $success;
-}
-}
-

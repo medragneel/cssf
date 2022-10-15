@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+select{
+    box-shadow: 0 10px 25px rgba($color: #000000, $alpha: 0.1);
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 1.5rem 6em 1.5rem 2rem;
+    border: 0;
+    outline: none;
+    &::selection {
+        color: #fff;
+        background-color: #333;
+    }
+}
+.select-comp{
+    position: relative;
+}
+.custom-arr{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: #333;
+    width: 4rem;
+    height: 100% ;
+    pointer-events: none;
+    font-size: 2em;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+
+
+}

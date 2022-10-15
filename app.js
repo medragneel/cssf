@@ -9,7 +9,12 @@
 //    }
 //    
 //})
+// alert close btn
+const closeBtn = document.querySelector('.close-btn');
 
+closeBtn.addEventListener('click',()=>{
+    closeBtn.parentElement.style.display = 'none'
+})
 
 
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+    <title></title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <h1>medmh</h1>
+        </div>
+        <a class="hamburger" href="#">
+            <span class="bar bar1 bg-dark"></span>
+            <span class="bar bar2 bg-dark"></span>
+            <span class="bar bar3 bg-dark"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        const hamburger =document.querySelector('.hamburger') 
+        const navLinks = document.querySelector('.nav-links')
+        hamburger.addEventListener('click',()=>{
+                    navLinks.classList.toggle('active')
+                })
+    </script>
+    
+</body>
+</html>

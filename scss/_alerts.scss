@@ -1,0 +1,27 @@
+@import 'variables';
+
+.alert{
+    background-color: $light default;
+    color: $dark default;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.1);
+}
+.close-btn{
+    cursor: pointer;
+    padding-inline-start:20px ;
+
+
+}
+
+@each $key, $clr in $colors {
+  .alert-#{$key}{
+      background-color: $clr;
+      @if ($clr == $light ) { 
+          color: $dark;
+      }@else{
+
+          color: $light;
+      }
+  }
+}
