@@ -19,8 +19,9 @@
 
 /* reset styles */
 * {
-  color: inherit;
-  margin: 0;
+    box-sizing:border-box;
+    color: inherit;
+    margin: 0;
 }
 
 body {
@@ -130,4 +131,7 @@ select{
  position: relative;
 }
 
+input[type="range"]{
+-webkit-appearance:none;
+}
 
