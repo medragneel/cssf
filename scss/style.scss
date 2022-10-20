@@ -6,15 +6,6 @@
 
 @import '_variables';
 @import '_breakpoint';
-@import '_buttons';
-@import '_card';
-@import '_text';
-@import '_utility';
-@import '_grid';
-@import '_nav';
-@import 'tables';
-@import 'dropdown';
-@import 'alerts';
 
 
 /* reset styles */
@@ -135,3 +126,12 @@ input[type="range"]{
 -webkit-appearance:none;
 }
 
+
+
+@import '_buttons';
+@import '_card';
+@import '_text';
+@import '_utility';
+@import '_grid';
+@import '_nav';
+@import '_tables';
