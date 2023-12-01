@@ -18,6 +18,22 @@ $gridGap: 2rem;
   & + .grid {
     margin-top: $gridGap;
   }
+
+
+  &.no-gap {
+    grid-gap: 0;
+  }
+
+  &.sm-gap {
+    grid-gap: 1rem;
+  }
+
+  &.lg-gap {
+    grid-gap: 3rem;
+  }
+
+  // Add more responsive classes as needed
+
 }
 
 

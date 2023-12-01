@@ -1,8 +1,8 @@
-//
+// Importing variables
 @import 'variables';
 
-
-.btn{
+// Button styles
+.btn {
     color: $light;
     background-color: $primary;
     border-radius: $br;
@@ -10,54 +10,52 @@
     padding: $bp;
     outline: none;
     cursor: pointer;
+    box-shadow: $bsh;
+    font-size: $b-fs;
+    margin: $bga;
+
+    &.small {
+        font-size: $sm-fs;
+    }
+
+    &.large {
+        font-size: $lg-fs;
+    }
+
+    &.xl {
+        font-size: $xl-fs;
+    }
+
+    &.xxl {
+        font-size: $xxl-fs;
+    }
 }
 
-
+// Button variations
 @each $key, $clr in $colors {
-  .btn-#{$key}-outline{
-    background-color: transparent;
-    border: $b-thickness solid $clr;
-    color: $clr;
-    &:hover{
+    .btn-#{$key} {
         background-color: $clr;
-        color: $light;
-        border: none;
-        @if ($clr == $light) {
+        @if ($clr == $light ) { 
             color: $dark;
-            
         }
 
-
+        &:hover {
+            background-color: transparent;
+            border: $b-thickness solid $clr;
+            color: $clr;
         }
-  }
-}
+    }
 
-@each $key, $clr in $colors {
-  .btn-#{$key}{
-      background-color: $clr;
-      @if ($clr == $light ) { 
-          color: $dark;
-      }
-    &:hover{
+    .btn-outline-#{$key} {
         background-color: transparent;
         border: $b-thickness solid $clr;
         color: $clr;
 
+        &:hover {
+            background-color: $clr;
+            color: $light;
+            border: none;
         }
-  }
-}
-
-
-
-@each $key, $clr in $colors {
-  .border-#{$key}{
-      border: $b-thickness solid $clr;
-  }
-}
-
-@each $key, $clr in $colors {
-  .clr-accent-#{$key}{
-      accent-color:$clr;
-  }
+    }
 }
 

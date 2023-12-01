@@ -9,10 +9,16 @@
 
 
 /* reset styles */
+/**
+ * The `*` class is a CSS selector that targets all elements on the page.
+ * It sets the box-sizing property to border-box, which includes the padding and border in the element's total width and height.
+ * It also sets the color property to inherit, which allows elements to inherit the color of their parent elements.
+ * Finally, it sets the margin property to 0, which removes any default margins on elements.
+ */
 * {
-    box-sizing:border-box;
-    color: inherit;
-    margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  margin: 0;
 }
 
 body {

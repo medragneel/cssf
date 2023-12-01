@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/bord-demo");
 /* reset styles */
+/**
+ * The `*` class is a CSS selector that targets all elements on the page.
+ * It sets the box-sizing property to border-box, which includes the padding and border in the element's total width and height.
+ * It also sets the color property to inherit, which allows elements to inherit the color of their parent elements.
+ * Finally, it sets the margin property to 0, which removes any default margins on elements.
+ */
 @import url("http://fonts.cdnfonts.com/css/earth-orbiter");
 @import url("http://fonts.cdnfonts.com/css/bord-demo");
 * {
@@ -24,7 +30,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: hsl(211deg, 90%, 50%);
+  color: hsl(211, 90%, 50%);
 }
 
 hr {
@@ -37,7 +43,7 @@ img {
 }
 
 h1 {
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .fs-bord {
@@ -68,7 +74,7 @@ input, textarea {
 }
 
 :is(input, textarea):focus {
-  border: 1px solid hsl(211deg, 90%, 50%);
+  border: 1px solid hsl(211, 90%, 50%);
 }
 
 .carousel {
@@ -87,7 +93,7 @@ input, textarea {
 
 ::selection {
   background-color: #084a91;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
   text-shadow: none;
 }
 
@@ -97,7 +103,7 @@ select {
   border-radius: 8px;
   width: clamp(50%, 20em, 100%);
   border: 1px solid transparent;
-  box-shadow: 0 3px 2px -3px hsl(211deg, 90%, 50%);
+  box-shadow: 0 3px 2px -3px hsl(211, 90%, 50%);
   transition: border 0.3s ease-in, outline 0.6s ease-in, box-shadow 0.6s ease-in;
   appearance: none;
   background-image: url('data:image/svg+xml; utf8, <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.2929,5.292875 C12.6834,4.902375 13.3166,4.902375 13.7071,5.292875 C14.0976,5.683375 14.0976,6.316555 13.7071,6.707085 L8.70711,11.707085 C8.31658,12.097605 7.68342,12.097605 7.29289,11.707085 L2.29289,6.707085 C1.90237,6.316555 1.90237,5.683375 2.29289,5.292875 C2.68342,4.902375 3.31658,4.902375 3.70711,5.292875 L8,9.585765 L12.2929,5.292875 Z"  style="fill: hsl(222,20%,40%);"/></svg>');
@@ -130,248 +136,198 @@ input[type=radio] {
   -webkit-appearance: none;
   width: 1rem;
   height: 1rem;
-  outline: 3px solid hsl(0deg, 5%, 10%);
+  outline: 3px solid hsl(0, 5%, 10%);
   outline-offset: 3px;
 }
 
 input[type=radio]:checked {
-  background-color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 5%, 10%);
 }
 
 .btn {
-  color: hsl(0deg, 0%, 93%);
-  background-color: hsl(211deg, 90%, 50%);
+  color: hsl(0, 0%, 93%);
+  background-color: hsl(211, 90%, 50%);
   border-radius: 8px;
   border: none;
   padding: 1rem;
   outline: none;
   cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  margin: 1rem;
 }
-
-.btn-primary-outline {
-  background-color: transparent;
-  border: 1px solid hsl(211deg, 90%, 50%);
-  color: hsl(211deg, 90%, 50%);
+.btn.small {
+  font-size: 0.75rem;
 }
-.btn-primary-outline:hover {
-  background-color: hsl(211deg, 90%, 50%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
+.btn.large {
+  font-size: 1.5rem;
 }
-
-.btn-dark-outline {
-  background-color: transparent;
-  border: 1px solid hsl(0deg, 5%, 10%);
-  color: hsl(0deg, 5%, 10%);
+.btn.xl {
+  font-size: 2rem;
 }
-.btn-dark-outline:hover {
-  background-color: hsl(0deg, 5%, 10%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-}
-
-.btn-light-outline {
-  background-color: transparent;
-  border: 1px solid hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 93%);
-}
-.btn-light-outline:hover {
-  background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-  color: hsl(0deg, 5%, 10%);
-}
-
-.btn-danger-outline {
-  background-color: transparent;
-  border: 1px solid hsl(337deg, 100%, 50%);
-  color: hsl(337deg, 100%, 50%);
-}
-.btn-danger-outline:hover {
-  background-color: hsl(337deg, 100%, 50%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-}
-
-.btn-success-outline {
-  background-color: transparent;
-  border: 1px solid hsl(151deg, 54%, 53%);
-  color: hsl(151deg, 54%, 53%);
-}
-.btn-success-outline:hover {
-  background-color: hsl(151deg, 54%, 53%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-}
-
-.btn-warning-outline {
-  background-color: transparent;
-  border: 1px solid hsl(46deg, 92%, 54%);
-  color: hsl(46deg, 92%, 54%);
-}
-.btn-warning-outline:hover {
-  background-color: hsl(46deg, 92%, 54%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-}
-
-.btn-gold-outline {
-  background-color: transparent;
-  border: 1px solid hsl(30deg, 50%, 60%);
-  color: hsl(30deg, 50%, 60%);
-}
-.btn-gold-outline:hover {
-  background-color: hsl(30deg, 50%, 60%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
-}
-
-.btn-disabled-outline {
-  background-color: transparent;
-  border: 1px solid hsl(0deg, 0%, 87%);
-  color: hsl(0deg, 0%, 87%);
-}
-.btn-disabled-outline:hover {
-  background-color: hsl(0deg, 0%, 87%);
-  color: hsl(0deg, 0%, 93%);
-  border: none;
+.btn.xxl {
+  font-size: 3rem;
 }
 
 .btn-primary {
-  background-color: hsl(211deg, 90%, 50%);
+  background-color: hsl(211, 90%, 50%);
 }
 .btn-primary:hover {
   background-color: transparent;
-  border: 1px solid hsl(211deg, 90%, 50%);
-  color: hsl(211deg, 90%, 50%);
+  border: 1px solid hsl(211, 90%, 50%);
+  color: hsl(211, 90%, 50%);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid hsl(211, 90%, 50%);
+  color: hsl(211, 90%, 50%);
+}
+.btn-outline-primary:hover {
+  background-color: hsl(211, 90%, 50%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-dark {
-  background-color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 5%, 10%);
 }
 .btn-dark:hover {
   background-color: transparent;
-  border: 1px solid hsl(0deg, 5%, 10%);
-  color: hsl(0deg, 5%, 10%);
+  border: 1px solid hsl(0, 5%, 10%);
+  color: hsl(0, 5%, 10%);
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  border: 1px solid hsl(0, 5%, 10%);
+  color: hsl(0, 5%, 10%);
+}
+.btn-outline-dark:hover {
+  background-color: hsl(0, 5%, 10%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-light {
-  background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 10%);
 }
 .btn-light:hover {
   background-color: transparent;
-  border: 1px solid hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 93%);
+  border: 1px solid hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 93%);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  border: 1px solid hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 93%);
+}
+.btn-outline-light:hover {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-danger {
-  background-color: hsl(337deg, 100%, 50%);
+  background-color: hsl(337, 100%, 50%);
 }
 .btn-danger:hover {
   background-color: transparent;
-  border: 1px solid hsl(337deg, 100%, 50%);
-  color: hsl(337deg, 100%, 50%);
+  border: 1px solid hsl(337, 100%, 50%);
+  color: hsl(337, 100%, 50%);
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  border: 1px solid hsl(337, 100%, 50%);
+  color: hsl(337, 100%, 50%);
+}
+.btn-outline-danger:hover {
+  background-color: hsl(337, 100%, 50%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-success {
-  background-color: hsl(151deg, 54%, 53%);
+  background-color: hsl(151, 54%, 53%);
 }
 .btn-success:hover {
   background-color: transparent;
-  border: 1px solid hsl(151deg, 54%, 53%);
-  color: hsl(151deg, 54%, 53%);
+  border: 1px solid hsl(151, 54%, 53%);
+  color: hsl(151, 54%, 53%);
+}
+
+.btn-outline-success {
+  background-color: transparent;
+  border: 1px solid hsl(151, 54%, 53%);
+  color: hsl(151, 54%, 53%);
+}
+.btn-outline-success:hover {
+  background-color: hsl(151, 54%, 53%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-warning {
-  background-color: hsl(46deg, 92%, 54%);
+  background-color: hsl(46, 92%, 54%);
 }
 .btn-warning:hover {
   background-color: transparent;
-  border: 1px solid hsl(46deg, 92%, 54%);
-  color: hsl(46deg, 92%, 54%);
+  border: 1px solid hsl(46, 92%, 54%);
+  color: hsl(46, 92%, 54%);
+}
+
+.btn-outline-warning {
+  background-color: transparent;
+  border: 1px solid hsl(46, 92%, 54%);
+  color: hsl(46, 92%, 54%);
+}
+.btn-outline-warning:hover {
+  background-color: hsl(46, 92%, 54%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-gold {
-  background-color: hsl(30deg, 50%, 60%);
+  background-color: hsl(30, 50%, 60%);
 }
 .btn-gold:hover {
   background-color: transparent;
-  border: 1px solid hsl(30deg, 50%, 60%);
-  color: hsl(30deg, 50%, 60%);
+  border: 1px solid hsl(30, 50%, 60%);
+  color: hsl(30, 50%, 60%);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1px solid hsl(30, 50%, 60%);
+  color: hsl(30, 50%, 60%);
+}
+.btn-outline-gold:hover {
+  background-color: hsl(30, 50%, 60%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .btn-disabled {
-  background-color: hsl(0deg, 0%, 87%);
+  background-color: hsl(0, 0%, 87%);
 }
 .btn-disabled:hover {
   background-color: transparent;
-  border: 1px solid hsl(0deg, 0%, 87%);
-  color: hsl(0deg, 0%, 87%);
+  border: 1px solid hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 87%);
 }
 
-.border-primary {
-  border: 1px solid hsl(211deg, 90%, 50%);
+.btn-outline-disabled {
+  background-color: transparent;
+  border: 1px solid hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 87%);
 }
-
-.border-dark {
-  border: 1px solid hsl(0deg, 5%, 10%);
-}
-
-.border-light {
-  border: 1px solid hsl(0deg, 0%, 93%);
-}
-
-.border-danger {
-  border: 1px solid hsl(337deg, 100%, 50%);
-}
-
-.border-success {
-  border: 1px solid hsl(151deg, 54%, 53%);
-}
-
-.border-warning {
-  border: 1px solid hsl(46deg, 92%, 54%);
-}
-
-.border-gold {
-  border: 1px solid hsl(30deg, 50%, 60%);
-}
-
-.border-disabled {
-  border: 1px solid hsl(0deg, 0%, 87%);
-}
-
-.clr-accent-primary {
-  accent-color: hsl(211deg, 90%, 50%);
-}
-
-.clr-accent-dark {
-  accent-color: hsl(0deg, 5%, 10%);
-}
-
-.clr-accent-light {
-  accent-color: hsl(0deg, 0%, 93%);
-}
-
-.clr-accent-danger {
-  accent-color: hsl(337deg, 100%, 50%);
-}
-
-.clr-accent-success {
-  accent-color: hsl(151deg, 54%, 53%);
-}
-
-.clr-accent-warning {
-  accent-color: hsl(46deg, 92%, 54%);
-}
-
-.clr-accent-gold {
-  accent-color: hsl(30deg, 50%, 60%);
-}
-
-.clr-accent-disabled {
-  accent-color: hsl(0deg, 0%, 87%);
+.btn-outline-disabled:hover {
+  background-color: hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 93%);
+  border: none;
 }
 
 .card {
@@ -398,12 +354,12 @@ input[type=radio]:checked {
 }
 
 .txt-primary {
-  color: hsl(211deg, 90%, 50%);
+  color: hsl(211, 90%, 50%);
 }
 
 .bg-primary {
-  background-color: hsl(211deg, 90%, 50%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(211, 90%, 50%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-1 {
@@ -412,7 +368,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-1 {
   background-color: #2589f3;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-1 {
@@ -421,7 +377,7 @@ input[type=radio]:checked {
 
 .bg-primary-darken-1 {
   background-color: #0c70da;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-2 {
@@ -430,7 +386,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-2 {
   background-color: #3d96f5;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-2 {
@@ -439,7 +395,7 @@ input[type=radio]:checked {
 
 .bg-primary-darken-2 {
   background-color: #0a63c2;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-3 {
@@ -448,7 +404,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-3 {
   background-color: #56a3f6;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-3 {
@@ -457,7 +413,7 @@ input[type=radio]:checked {
 
 .bg-primary-darken-3 {
   background-color: #0957a9;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-4 {
@@ -466,7 +422,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-4 {
   background-color: #6eb0f7;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-4 {
@@ -475,7 +431,7 @@ input[type=radio]:checked {
 
 .bg-primary-darken-4 {
   background-color: #084a91;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-5 {
@@ -484,7 +440,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-5 {
   background-color: #86bef9;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-5 {
@@ -493,7 +449,7 @@ input[type=radio]:checked {
 
 .bg-primary-darken-5 {
   background-color: #073e79;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-primary-lighten-6 {
@@ -502,7 +458,7 @@ input[type=radio]:checked {
 
 .bg-primary-lighten-6 {
   background-color: #9ecbfa;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-primary-darken-6 {
@@ -511,16 +467,16 @@ input[type=radio]:checked {
 
 .bg-primary-darken-6 {
   background-color: #053261;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark {
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .bg-dark {
-  background-color: hsl(0deg, 5%, 10%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 5%, 10%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-1 {
@@ -529,7 +485,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-1 {
   background-color: #322f2f;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-1 {
@@ -538,7 +494,7 @@ input[type=radio]:checked {
 
 .bg-dark-darken-1 {
   background-color: #181616;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-2 {
@@ -547,7 +503,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-2 {
   background-color: #494646;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-2 {
@@ -556,7 +512,7 @@ input[type=radio]:checked {
 
 .bg-dark-darken-2 {
   background-color: #161313;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-3 {
@@ -565,7 +521,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-3 {
   background-color: #5f5d5d;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-3 {
@@ -574,7 +530,7 @@ input[type=radio]:checked {
 
 .bg-dark-darken-3 {
   background-color: #131111;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-4 {
@@ -583,7 +539,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-4 {
   background-color: #767474;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-4 {
@@ -592,7 +548,7 @@ input[type=radio]:checked {
 
 .bg-dark-darken-4 {
   background-color: #100e0e;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-5 {
@@ -601,7 +557,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-5 {
   background-color: #8d8c8c;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-5 {
@@ -610,7 +566,7 @@ input[type=radio]:checked {
 
 .bg-dark-darken-5 {
   background-color: #0e0c0c;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-dark-lighten-6 {
@@ -619,7 +575,7 @@ input[type=radio]:checked {
 
 .bg-dark-lighten-6 {
   background-color: #a4a3a3;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-dark-darken-6 {
@@ -628,17 +584,17 @@ input[type=radio]:checked {
 
 .bg-dark-darken-6 {
   background-color: #0b0a0a;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light {
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .bg-light {
-  background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-lighten-1 {
@@ -647,7 +603,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-1 {
   background-color: #efefef;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-1 {
@@ -656,7 +612,7 @@ input[type=radio]:checked {
 
 .bg-light-darken-1 {
   background-color: #d5d5d5;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light-lighten-2 {
@@ -665,7 +621,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-2 {
   background-color: #f1f1f1;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-2 {
@@ -674,7 +630,7 @@ input[type=radio]:checked {
 
 .bg-light-darken-2 {
   background-color: #bebebe;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light-lighten-3 {
@@ -683,7 +639,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-3 {
   background-color: #f2f2f2;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-3 {
@@ -692,7 +648,7 @@ input[type=radio]:checked {
 
 .bg-light-darken-3 {
   background-color: #a6a6a6;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light-lighten-4 {
@@ -701,7 +657,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-4 {
   background-color: #f4f4f4;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-4 {
@@ -710,7 +666,7 @@ input[type=radio]:checked {
 
 .bg-light-darken-4 {
   background-color: #8e8e8e;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light-lighten-5 {
@@ -719,7 +675,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-5 {
   background-color: #f6f6f6;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-5 {
@@ -728,7 +684,7 @@ input[type=radio]:checked {
 
 .bg-light-darken-5 {
   background-color: #777777;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-light-lighten-6 {
@@ -737,7 +693,7 @@ input[type=radio]:checked {
 
 .bg-light-lighten-6 {
   background-color: #f8f8f8;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-light-darken-6 {
@@ -746,16 +702,16 @@ input[type=radio]:checked {
 
 .bg-light-darken-6 {
   background-color: #5f5f5f;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger {
-  color: hsl(337deg, 100%, 50%);
+  color: hsl(337, 100%, 50%);
 }
 
 .bg-danger {
-  background-color: hsl(337deg, 100%, 50%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(337, 100%, 50%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-1 {
@@ -764,7 +720,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-1 {
   background-color: #ff1a72;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-1 {
@@ -773,7 +729,7 @@ input[type=radio]:checked {
 
 .bg-danger-darken-1 {
   background-color: #e60058;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-2 {
@@ -782,7 +738,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-2 {
   background-color: #ff3381;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-2 {
@@ -791,7 +747,7 @@ input[type=radio]:checked {
 
 .bg-danger-darken-2 {
   background-color: #cc004e;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-3 {
@@ -800,7 +756,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-3 {
   background-color: #ff4d91;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-3 {
@@ -809,7 +765,7 @@ input[type=radio]:checked {
 
 .bg-danger-darken-3 {
   background-color: #b30045;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-4 {
@@ -818,7 +774,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-4 {
   background-color: #ff66a1;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-4 {
@@ -827,7 +783,7 @@ input[type=radio]:checked {
 
 .bg-danger-darken-4 {
   background-color: #99003b;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-5 {
@@ -836,7 +792,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-5 {
   background-color: #ff80b1;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-5 {
@@ -845,7 +801,7 @@ input[type=radio]:checked {
 
 .bg-danger-darken-5 {
   background-color: #800031;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-danger-lighten-6 {
@@ -854,7 +810,7 @@ input[type=radio]:checked {
 
 .bg-danger-lighten-6 {
   background-color: #ff99c0;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-danger-darken-6 {
@@ -863,16 +819,16 @@ input[type=radio]:checked {
 
 .bg-danger-darken-6 {
   background-color: #660027;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success {
-  color: hsl(151deg, 54%, 53%);
+  color: hsl(151, 54%, 53%);
 }
 
 .bg-success {
-  background-color: hsl(151deg, 54%, 53%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(151, 54%, 53%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-1 {
@@ -881,7 +837,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-1 {
   background-color: #59ce95;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-1 {
@@ -890,7 +846,7 @@ input[type=radio]:checked {
 
 .bg-success-darken-1 {
   background-color: #3fb47b;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-2 {
@@ -899,7 +855,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-2 {
   background-color: #6bd3a1;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-2 {
@@ -908,7 +864,7 @@ input[type=radio]:checked {
 
 .bg-success-darken-2 {
   background-color: #38a06e;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-3 {
@@ -917,7 +873,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-3 {
   background-color: #7ed9ac;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-3 {
@@ -926,7 +882,7 @@ input[type=radio]:checked {
 
 .bg-success-darken-3 {
   background-color: #318c60;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-4 {
@@ -935,7 +891,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-4 {
   background-color: #90deb8;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-4 {
@@ -944,7 +900,7 @@ input[type=radio]:checked {
 
 .bg-success-darken-4 {
   background-color: #2a7852;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-5 {
@@ -953,7 +909,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-5 {
   background-color: #a3e4c4;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-5 {
@@ -962,7 +918,7 @@ input[type=radio]:checked {
 
 .bg-success-darken-5 {
   background-color: #236445;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-success-lighten-6 {
@@ -971,7 +927,7 @@ input[type=radio]:checked {
 
 .bg-success-lighten-6 {
   background-color: #b5e9d0;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-success-darken-6 {
@@ -980,16 +936,16 @@ input[type=radio]:checked {
 
 .bg-success-darken-6 {
   background-color: #1c5037;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning {
-  color: hsl(46deg, 92%, 54%);
+  color: hsl(46, 92%, 54%);
 }
 
 .bg-warning {
-  background-color: hsl(46deg, 92%, 54%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(46, 92%, 54%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-1 {
@@ -998,7 +954,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-1 {
   background-color: #f7c935;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-1 {
@@ -1007,7 +963,7 @@ input[type=radio]:checked {
 
 .bg-warning-darken-1 {
   background-color: #ddb01b;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-2 {
@@ -1016,7 +972,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-2 {
   background-color: #f8cf4b;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-2 {
@@ -1025,7 +981,7 @@ input[type=radio]:checked {
 
 .bg-warning-darken-2 {
   background-color: #c59c18;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-3 {
@@ -1034,7 +990,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-3 {
   background-color: #f9d562;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-3 {
@@ -1043,7 +999,7 @@ input[type=radio]:checked {
 
 .bg-warning-darken-3 {
   background-color: #ac8915;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-4 {
@@ -1052,7 +1008,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-4 {
   background-color: #fadb78;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-4 {
@@ -1061,7 +1017,7 @@ input[type=radio]:checked {
 
 .bg-warning-darken-4 {
   background-color: #947512;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-5 {
@@ -1070,7 +1026,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-5 {
   background-color: #fbe18f;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-5 {
@@ -1079,7 +1035,7 @@ input[type=radio]:checked {
 
 .bg-warning-darken-5 {
   background-color: #7b620f;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-warning-lighten-6 {
@@ -1088,7 +1044,7 @@ input[type=radio]:checked {
 
 .bg-warning-lighten-6 {
   background-color: #fbe7a5;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-warning-darken-6 {
@@ -1097,16 +1053,16 @@ input[type=radio]:checked {
 
 .bg-warning-darken-6 {
   background-color: #624e0c;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold {
-  color: hsl(30deg, 50%, 60%);
+  color: hsl(30, 50%, 60%);
 }
 
 .bg-gold {
-  background-color: hsl(30deg, 50%, 60%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(30, 50%, 60%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-1 {
@@ -1115,7 +1071,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-1 {
   background-color: #d1a375;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-1 {
@@ -1124,7 +1080,7 @@ input[type=radio]:checked {
 
 .bg-gold-darken-1 {
   background-color: #b88a5c;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-2 {
@@ -1133,7 +1089,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-2 {
   background-color: #d6ad85;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-2 {
@@ -1142,7 +1098,7 @@ input[type=radio]:checked {
 
 .bg-gold-darken-2 {
   background-color: #a37a52;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-3 {
@@ -1151,7 +1107,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-3 {
   background-color: #dbb894;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-3 {
@@ -1160,7 +1116,7 @@ input[type=radio]:checked {
 
 .bg-gold-darken-3 {
   background-color: #8f6b47;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-4 {
@@ -1169,7 +1125,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-4 {
   background-color: #e0c2a3;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-4 {
@@ -1178,7 +1134,7 @@ input[type=radio]:checked {
 
 .bg-gold-darken-4 {
   background-color: #7a5c3d;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-5 {
@@ -1187,7 +1143,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-5 {
   background-color: #e6ccb3;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-5 {
@@ -1196,7 +1152,7 @@ input[type=radio]:checked {
 
 .bg-gold-darken-5 {
   background-color: #664d33;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-gold-lighten-6 {
@@ -1205,7 +1161,7 @@ input[type=radio]:checked {
 
 .bg-gold-lighten-6 {
   background-color: #ebd6c2;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-gold-darken-6 {
@@ -1214,16 +1170,16 @@ input[type=radio]:checked {
 
 .bg-gold-darken-6 {
   background-color: #523d29;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled {
-  color: hsl(0deg, 0%, 87%);
+  color: hsl(0, 0%, 87%);
 }
 
 .bg-disabled {
-  background-color: hsl(0deg, 0%, 87%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-1 {
@@ -1232,7 +1188,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-1 {
   background-color: #e1e1e1;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-1 {
@@ -1241,7 +1197,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-1 {
   background-color: #c8c8c8;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-2 {
@@ -1250,7 +1206,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-2 {
   background-color: #e5e5e5;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-2 {
@@ -1259,7 +1215,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-2 {
   background-color: #b2b2b2;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-3 {
@@ -1268,7 +1224,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-3 {
   background-color: #e8e8e8;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-3 {
@@ -1277,7 +1233,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-3 {
   background-color: #9b9b9b;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-4 {
@@ -1286,7 +1242,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-4 {
   background-color: #ebebeb;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-4 {
@@ -1295,7 +1251,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-4 {
   background-color: #858585;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-5 {
@@ -1304,7 +1260,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-5 {
   background-color: #efefef;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-5 {
@@ -1313,7 +1269,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-5 {
   background-color: #6f6f6f;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .txt-disabled-lighten-6 {
@@ -1322,7 +1278,7 @@ input[type=radio]:checked {
 
 .bg-disabled-lighten-6 {
   background-color: #f2f2f2;
-  color: hsl(0deg, 5%, 10%);
+  color: hsl(0, 5%, 10%);
 }
 
 .txt-disabled-darken-6 {
@@ -1331,7 +1287,7 @@ input[type=radio]:checked {
 
 .bg-disabled-darken-6 {
   background-color: #595959;
-  color: hsl(0deg, 0%, 93%);
+  color: hsl(0, 0%, 93%);
 }
 
 .p-0 {
@@ -1971,10 +1927,19 @@ input[type=radio]:checked {
 .grid + .grid {
   margin-top: 2rem;
 }
+.grid.no-gap {
+  grid-gap: 0;
+}
+.grid.sm-gap {
+  grid-gap: 1rem;
+}
+.grid.lg-gap {
+  grid-gap: 3rem;
+}
 
 nav:default {
-  background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 10%);
 }
 
 .nav {
@@ -2016,13 +1981,13 @@ nav:default {
 }
 
 .bar:default {
-  background-color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 0%, 93%);
 }
 
 .drop-links {
   padding: 2em;
   position: absolute;
-  background-color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 0%, 93%);
 }
 
 .drop-links > li {
@@ -2133,56 +2098,53 @@ table th, table td {
 }
 
 .alert {
-  background-color: hsl(0deg, 0%, 93%) default;
-  color: hsl(0deg, 5%, 10%) default;
-  padding: 1rem 4rem;
+  padding: 1rem 1rem;
   border-radius: 8px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-
-.close-btn {
+.alert.close-btn {
   cursor: pointer;
-  padding-inline-start: 20px;
+  padding-inline-start: 1rem;
 }
 
 .alert-primary {
-  background-color: hsl(211deg, 90%, 50%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(211, 90%, 50%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-dark {
-  background-color: hsl(0deg, 5%, 10%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 5%, 10%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-light {
-  background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 5%, 10%);
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 5%, 10%);
 }
 
 .alert-danger {
-  background-color: hsl(337deg, 100%, 50%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(337, 100%, 50%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-success {
-  background-color: hsl(151deg, 54%, 53%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(151, 54%, 53%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-warning {
-  background-color: hsl(46deg, 92%, 54%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(46, 92%, 54%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-gold {
-  background-color: hsl(30deg, 50%, 60%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(30, 50%, 60%);
+  color: hsl(0, 0%, 93%);
 }
 
 .alert-disabled {
-  background-color: hsl(0deg, 0%, 87%);
-  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 93%);
 }
 
 [data-dropdown] {
