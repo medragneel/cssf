@@ -317,6 +317,15 @@ $utilities:(
     "unset": unset,
     )
 ),
+"box-shadow": (
+    "prefix": "shadow",
+    "values": (
+        "sm": 0 2px 4px rgba(0, 0, 0, 0.1),
+        "md": 0 4px 8px rgba(0, 0, 0, 0.1),
+        "lg": 0 8px 16px rgba(0, 0, 0, 0.1),
+        // Add more box shadow variations as needed
+    )
+),
 );
 
 
@@ -332,18 +341,18 @@ $utilities:(
 
                 #{$prop}: $val;
 
-            } 
+            }
         }@else{
             .#{$prefix}-#{$key}{
                 #{$prop}: $val;
 
-            } 
+            }
 
 
         }
 
     };
-    
+
 };
 
 
